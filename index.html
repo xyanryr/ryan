@@ -35,7 +35,7 @@
             ipsum recusandae iste placeat, voluptates qui laudantium!
           </div>
           <div class="b-container">
-            <button id="contact me">Contact Me</button>
+            <button id="contact-me">Contact Me</button>
           </div>
         </div>
         <div class="design">
@@ -164,14 +164,13 @@
     </div>
 
     <script>
-      // Mobile menu toggle
       const mobileMenu = document.getElementById("mobile-menu");
-      const navLinks = document.querySelector(".navbar");
+      const navLinks = document.querySelector(".nav-links");
 
       mobileMenu.addEventListener("click", () => {
         navLinks.classList.toggle("active");
       });
-      // Smooth scroll with offset for fixed header
+
       document.querySelectorAll("nav.nav-links a").forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
@@ -190,7 +189,7 @@
         });
       });
 
-      document.getElementById("about-me").addEventListener("click", () => {
+      document.getElementById("contact-me").addEventListener("click", () => {
         const contactsSection = document.getElementById("contacts");
         const headerOffset = document.querySelector("header.link").offsetHeight;
         const elementPosition = contactsSection.offsetTop;
