@@ -165,8 +165,9 @@
 
     <script>
       // Mobile menu toggle
-      const mobileMenu = document.querySelector("#mobile-menu");
-      const navLinks = document.querySelector("nav.nav-links");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLinks = document.querySelector(".navbar");
+
       mobileMenu.addEventListener("click", () => {
         navLinks.classList.toggle("active");
       });

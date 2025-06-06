@@ -509,3 +509,53 @@ footer {
         padding: 1rem;  
     }
 }
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  header.link {
+    padding: 0 10px;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    height: calc(100% - 60px);
+    padding-top: 30px;
+    border-radius: 0 0 0 20px;
+    z-index: 1001;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Adjust about section for small screen */
+  .about {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+}
