@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan's Portfolio</title>
+    <link rel="stylesheet" href="xyan.css" />
+  </head>
+  <body>
+    <div id="Home">
+      <header class="link">
+        <div class="Logo">Portfolio</div>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <nav class="nav-links">
+          <a href="#Home" class="t1">HOME</a>
+          <a href="#about" class="t1">ABOUT ME</a>
+          <a href="#Projects" class="t1">PROJECTS</a>
+          <a href="#contacts" class="t1">CONTACT</a>
+        </nav>
+      </header>
+    </div>
+
+    <div id="Portfolio">
+      <div class="p-container">
+        <div class="info">
+          <div class="p1">Hello!</div>
+          <div class="p2">I'm <span>Ryan Cesar A. Adoro</span></div>
+          <div class="p3"><span>W</span>EB <span>D</span>ESIGNER</div>
+          <div class="p4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque
+            natus qui at quis voluptatem repellat quae vero soluta dolorem.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis eaque vitae assumenda quae, velit magni soluta
+            distinctio voluptatum ea perferendis iusto, consectetur aspernatur
+            ipsum recusandae iste placeat, voluptates qui laudantium!
+          </div>
+          <div class="b-container">
+            <button id="contact me">Contact Me</button>
+          </div>
+        </div>
+        <div class="design">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="about-container">
+        <h1>About Me</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          dignissimos maiores vero a fugit repellat incidunt debitis eius,
+          corporis, rem accusantium numquam quibusdam ratione ex, accusamus
+          praesentium quae vitae eaque? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Sunt, iure? Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Iste, voluptate.
+        </p>
+
+        <h2>Skills</h2>
+        <div class="skills-container" role="list">
+          <div class="skill" role="listitem" tabindex="0">
+            <a class="skill-icon-link">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="Java"
+                class="skill-icon"
+              />
+            </a>
+            <h3>Java</h3>
+          </div>
+          <div class="skill" role="listitem" tabindex="0">
+            <a class="skill-icon-link">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+                class="skill-icon"
+              />
+            </a>
+            <h3>JavaScript</h3>
+          </div>
+          <div class="skill" role="listitem" tabindex="0">
+            <a class="skill-icon-link">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML"
+                class="skill-icon"
+              />
+            </a>
+            <h3>HTML</h3>
+          </div>
+          <div class="skill" role="listitem" tabindex="0">
+            <a class="skill-icon-link">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS"
+                class="skill-icon"
+              />
+            </a>
+            <h3>CSS</h3>
+          </div>
+        </div>
+
+        <h2>Education</h2>
+        <p>
+          Bachelor of Science in Information Technology from STI College
+          Alabang.
+        </p>
+      </div>
+    </div>
+
+    <div id="Projects">
+      <div class="projects-container">
+        <h1>My Projects</h1>
+        <div class="project">
+          <h2>Project Title 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in quis
+            dolorem eveniet quibusdam labore quasi mollitia necessitatibus earum
+            minima.
+          </p>
+          <a href="#Projects" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+          <h2>Project Title 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in quis
+            dolorem eveniet quibusdam labore quasi mollitia necessitatibus earum
+            minima.
+          </p>
+          <a href="#Projects" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+          <h2>Project Title 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut in quis
+            dolorem eveniet quibusdam labore quasi mollitia necessitatibus earum
+            minima.
+          </p>
+          <a href="#Projects" class="project-link">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="contacts">
+      <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>
+          If you would like to get in touch, feel free to reach out via the
+          following methods:
+        </p>
+        <form class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenu = document.querySelector("#mobile-menu");
+      const navLinks = document.querySelector("nav.nav-links");
+      mobileMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+      // Smooth scroll with offset for fixed header
+      document.querySelectorAll("nav.nav-links a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          navLinks.classList.remove("active");
+          const targetId = link.getAttribute("href");
+          const target = document.querySelector(targetId);
+          if (!target) return;
+          const headerOffset =
+            document.querySelector("header.link").offsetHeight;
+          const elementPosition = target.offsetTop;
+          const offsetPosition = elementPosition - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      document.getElementById("about-me").addEventListener("click", () => {
+        const contactsSection = document.getElementById("contacts");
+        const headerOffset = document.querySelector("header.link").offsetHeight;
+        const elementPosition = contactsSection.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      });
+
+      document
+        .querySelector(".contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for your message! I will get back to you soon.");
+          e.target.reset();
+        });
+    </script>
+
+    <footer>© 2025 Ryan Cesar A. Adoro. All rights reserved.</footer>
+  </body>
+</html>
