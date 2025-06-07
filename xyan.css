@@ -46,7 +46,7 @@ a:focus, a:hover {
     left: 0;
     box-shadow: 0 3px 12px rgb(26 35 126 / 0.5);
     z-index: 1000;
-    position: static;
+    position: fixed;
 }
 
 .Logo {
